@@ -1,0 +1,36 @@
+name: Validate JSON
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate JSON files
+        run: |
+          failed=0
+          passed=0
+          while IFS= read -r -d '' file; do
+            if ! python3 -m json.tool "$file" > /dev/null 2>&1; then
+              echo "❌ Invalid JSON: $file"
+              python3 -m json.tool "$file" 2>&1 || true
+              failed=$((failed + 1))
+            else
+              echo "✅ Valid JSON: $file"
+              passed=$((passed + 1))
+            fi
+          done < <(find . -name '*.json' -not -path './.git/*' -print0)
+
+          echo ""
+          echo "Results: $passed passed, $failed failed"
+          if [ "$failed" -ne 0 ]; then
+            echo "::error::$failed JSON file(s) failed validation. See above for details."
+            exit 1
+          fi
