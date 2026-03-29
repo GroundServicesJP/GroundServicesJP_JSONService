@@ -40,7 +40,9 @@
     "42": ["ALL", "直進 Straight out"]
   },
   "extra_spot_message": {
-    "13": "SPOT 13,14 CLSD DUE TO CONST.",
-    "14": "SPOT 13,14 CLSD DUE TO CONST."
+    "3A": ["スポットインはSPOT3の導入線に従い、左旋回してください。", 
+            "To SPOT in, follow SPOT 3 lead-in line and turn CCW."],
+    "13": ["SPOT 13,14 CLSD DUE TO CONST."],
+    "14": ["SPOT 13,14 CLSD DUE TO CONST."]
   }
 }
