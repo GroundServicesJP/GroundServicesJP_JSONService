@@ -9,7 +9,7 @@
   "spot_out_turn_direction" : {
     "1A": [["DH8D", "AT46", "AT76", "DH8B", "CRJ1", "CRJ2", "CRJ7"], "左 Left (CCW)"],
     "1B": [["DH8D", "AT46", "AT76", "DH8B", "CRJ1", "CRJ2", "CRJ7"], "左 Left (CCW)"],
-    "2": [["DH8D", "AT46", "AT76", "DH8B", "CRJ1", "CRJ2", "CRJ7"],"左 Left (CCW)"],
+    "2": [["DH8D", "AT46", "AT76", "DH8B", "CRJ1", "CRJ2", "CRJ7"], "左 Left (CCW)"],
     "3": [["DH8D", "AT46", "AT76", "DH8B", "CRJ1", "CRJ2", "CRJ7"], "右 Right (CW)"],
     "3A": ["ALL", "黄色破線に沿って Follow yellow dashed line"],
     "3B": [["DH8D", "AT46", "AT76", "DH8B", "CRJ1", "CRJ2", "CRJ7"], "右 Right (CW)"],
